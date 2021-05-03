@@ -152,10 +152,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7969d6b0a7d079d46a009594b421ae33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Map: {fileID: 0}
+  Map: {fileID: 2800000, guid: 7c085feb2592ab746a1fa5d7d4072360, type: 3}
   MapeadoDeColor:
   - color: {r: 0, g: 0, b: 0, a: 1}
-    prefab: {fileID: 0}
+    prefab: {fileID: 3966292726861535111, guid: 21526369594fdcc438ab56ac23ae8c65, type: 3}
+  - color: {r: 0, g: 0, b: 1, a: 1}
+    prefab: {fileID: 4425826970194019119, guid: 1523de5e1a525a646b732c6d5946357b, type: 3}
+  - color: {r: 0, g: 1, b: 0, a: 1}
+    prefab: {fileID: 4102202207800940142, guid: 78da32c9cffcceb44b11792ee7a4ba93, type: 3}
 --- !u!4 &1337520637
 Transform:
   m_ObjectHideFlags: 0
