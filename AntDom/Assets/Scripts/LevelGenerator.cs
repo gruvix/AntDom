@@ -26,7 +26,7 @@ public class LevelGenerator : MonoBehaviour
     {
         Color pixelcolor = Map.GetPixel(x, y);
 
-        if (pixelcolor == Color.clear)
+        if (pixelcolor == Color.white)
         {
             //Todos los pixeles trasparentes no generan bloque
             return;
@@ -36,7 +36,7 @@ public class LevelGenerator : MonoBehaviour
             if (colorasignado.color.Equals(pixelcolor))
             {
                 Vector2 posicion = new Vector2(x, y);
-                Instantiate(colorasignado.prefab);
+                Instantiate(colorasignado.prefab,posicion,Quaternion.identity);
             }
         }
     }
