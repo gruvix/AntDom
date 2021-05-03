@@ -31,5 +31,13 @@ public class LevelGenerator : MonoBehaviour
             //Todos los pixeles trasparentes no generan bloque
             return;
         }
+        foreach (PrefabsPorColor colorasignado in MapeadoDeColor)
+        {
+            if (colorasignado.color.Equals(pixelcolor))
+            {
+                Vector2 posicion = new Vector2(x, y);
+                Instantiate(colorasignado.prefab);
+            }
+        }
     }
 }
