@@ -6,7 +6,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject Entidades;
 
     public PrefabsPorColor[] MapeadoDeColor;
-    public PrefabsPorColor[] MapeadoDeEntiedades;
+    public LevelSettings MapeadoDeEntiedades;
     // Start is called before the first frame update
     void Start()
     {

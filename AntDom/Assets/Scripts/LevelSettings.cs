@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelSettings : MonoBehaviour
+[System.Serializable]
+public class LevelSettings
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject Brain;
+    public Sibling[] Siblings;
+}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+[System.Serializable]
+public class Sibling
+{
+    public GameObject Spawner;
+    public int Cantidad;
 }
