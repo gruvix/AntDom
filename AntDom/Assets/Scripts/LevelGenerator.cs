@@ -40,10 +40,6 @@ public class LevelGenerator : MonoBehaviour
         {
             if (colorasignado.color.Equals(pixelcolor))
             {
-                if (colorasignado.color == Color.red)
-                {
-                    Debug.Log("Spanw");
-                }
                 Vector2 posicion = new Vector2(x, y);
                 Instantiate(colorasignado.prefab, posicion, Quaternion.identity, gameObject.transform);
             }
@@ -53,7 +49,6 @@ public class LevelGenerator : MonoBehaviour
     void GenerateEntities()
     {
         Spawn = GameObject.Find("Spawn(Clone)");
-        Debug.Log(Spawn);
         if (Spawn)
         {
             Instantiate(MapeadoDeEntiedades.Brain, Spawn.transform.position, Quaternion.identity, Entidades.transform);
