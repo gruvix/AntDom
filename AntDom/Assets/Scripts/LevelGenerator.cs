@@ -3,12 +3,15 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
     public Texture2D Map;
+    public GameObject Entidades;
 
     public PrefabsPorColor[] MapeadoDeColor;
+    public PrefabsPorColor[] MapeadoDeEntiedades;
     // Start is called before the first frame update
     void Start()
     {
         GenerateLevel();
+        GenerateEntities();
     }
 
     void GenerateLevel()
@@ -36,8 +39,14 @@ public class LevelGenerator : MonoBehaviour
             if (colorasignado.color.Equals(pixelcolor))
             {
                 Vector2 posicion = new Vector2(x, y);
-                Instantiate(colorasignado.prefab,posicion,Quaternion.identity);
+                Instantiate(colorasignado.prefab,posicion,Quaternion.identity,gameObject.transform);
             }
         }
+    }
+
+    void GenerateEntities()
+    {
+        Transform Spawn = GameObject.Find("Spawn").transform;
+        
     }
 }
