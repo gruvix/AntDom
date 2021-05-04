@@ -47,6 +47,11 @@ public class LevelGenerator : MonoBehaviour
     void GenerateEntities()
     {
         Transform Spawn = GameObject.Find("Spawn").transform;
-        
+        Instantiate(MapeadoDeEntiedades.Brain, Spawn.position, Quaternion.identity, Entidades.transform);
+        foreach (Sibling sibling in MapeadoDeEntiedades.Siblings)
+        {
+            for (int i = 0; i< sibling.Cantidad;i++)
+            Instantiate(sibling.Spawner, Spawn.position, Quaternion.identity, Entidades.transform);
+        }
     }
 }
