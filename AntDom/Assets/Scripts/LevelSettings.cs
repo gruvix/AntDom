@@ -10,6 +10,6 @@ public class LevelSettings
 [System.Serializable]
 public class Sibling
 {
-    public GameObject Spawner;
+    public GameObject prefab;
     public int Cantidad;
 }

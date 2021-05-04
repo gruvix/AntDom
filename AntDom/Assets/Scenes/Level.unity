@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7969d6b0a7d079d46a009594b421ae33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Map: {fileID: 2800000, guid: 7c085feb2592ab746a1fa5d7d4072360, type: 3}
+  Map: {fileID: 2800000, guid: ea696019aa281234caebd7d54384099e, type: 3}
   Entidades: {fileID: 1397165331}
   MapeadoDeColor:
   - color: {r: 0, g: 0, b: 0, a: 1}
@@ -163,10 +163,12 @@ MonoBehaviour:
     prefab: {fileID: 4102202207800940142, guid: 78da32c9cffcceb44b11792ee7a4ba93, type: 3}
   - color: {r: 1, g: 0, b: 0, a: 1}
     prefab: {fileID: 3117208985656820166, guid: 4eacb35906427634cba0f43b13ab60b2, type: 3}
+  - color: {r: 1, g: 0.99862754, b: 0, a: 1}
+    prefab: {fileID: 3117208985656820166, guid: 4eacb35906427634cba0f43b13ab60b2, type: 3}
   MapeadoDeEntiedades:
     Brain: {fileID: 6067756594143643274, guid: af3542ff29f1d2542a5f02d614281461, type: 3}
     Siblings:
-    - Spawner: {fileID: 8041728243699347354, guid: cfe615f0df2ada344a06232c38c69429, type: 3}
+    - prefab: {fileID: 8041728243699347354, guid: cfe615f0df2ada344a06232c38c69429, type: 3}
       Cantidad: 1
 --- !u!4 &1337520637
 Transform:
@@ -191,7 +193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1397165332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Entidades
   m_TagString: Untagged
   m_Icon: {fileID: 0}

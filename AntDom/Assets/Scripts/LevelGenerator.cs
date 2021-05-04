@@ -7,6 +7,8 @@ public class LevelGenerator : MonoBehaviour
 
     public PrefabsPorColor[] MapeadoDeColor;
     public LevelSettings MapeadoDeEntiedades;
+
+    private GameObject Spawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,20 +40,28 @@ public class LevelGenerator : MonoBehaviour
         {
             if (colorasignado.color.Equals(pixelcolor))
             {
+                if (colorasignado.color == Color.red)
+                {
+                    Debug.Log("Spanw");
+                }
                 Vector2 posicion = new Vector2(x, y);
-                Instantiate(colorasignado.prefab,posicion,Quaternion.identity,gameObject.transform);
+                Instantiate(colorasignado.prefab, posicion, Quaternion.identity, gameObject.transform);
             }
         }
     }
 
     void GenerateEntities()
     {
-        Transform Spawn = GameObject.Find("Spawn").transform;
-        Instantiate(MapeadoDeEntiedades.Brain, Spawn.position, Quaternion.identity, Entidades.transform);
-        foreach (Sibling sibling in MapeadoDeEntiedades.Siblings)
+        Spawn = GameObject.Find("Spawn(Clone)");
+        Debug.Log(Spawn);
+        if (Spawn)
         {
-            for (int i = 0; i< sibling.Cantidad;i++)
-            Instantiate(sibling.Spawner, Spawn.position, Quaternion.identity, Entidades.transform);
+            Instantiate(MapeadoDeEntiedades.Brain, Spawn.transform.position, Quaternion.identity, Entidades.transform);
+            foreach (Sibling sibling in MapeadoDeEntiedades.Siblings)
+            {
+                for (int i = 0; i < sibling.Cantidad; i++)
+                    Instantiate(sibling.prefab, Spawn.transform.position, Quaternion.identity, Entidades.transform);
+            }
         }
     }
 }
